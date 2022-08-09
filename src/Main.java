@@ -14,7 +14,7 @@ public class Main {
             if ("end".equals(input)) {
                 break;
             }
-            if ("1".equals(input)) {
+            if ("go".equals(input)) {
                 Shop.shopping();
                 Shop.printBasket();
                 Shop.summarizer();

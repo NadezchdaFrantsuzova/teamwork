@@ -31,10 +31,11 @@ public class Main {
                     throw new RuntimeException("Введен некорректный номер товара! Пожалуйста, введите номер из списка.");
                 }
                 int productCount = Integer.parseInt(custChoice[1]);
-                if (productCount < 0) {
-                    throw new RuntimeException("Введено некорректное количество товара! Пожалуйста, укажите количество еще раз.");
+                if (productCount == 0) {
+                    basket[productNumber] = 0;
+                } else {
+                    basket[productNumber] += productCount;
                 }
-                basket[productNumber] += productCount;
             } catch (NumberFormatException error) {
                 System.out.println("Вы ввели название товара! Пожалуйста, введите его номер по списку.");
                 continue;
